@@ -1,0 +1,10 @@
+Flask
+Flask-Pymongo
+Flask-And-Redis
+Flask-Script
+pymongo==3.9.0
+
+requests
+autopep8
+gunicorn
+sentry-sdk[flask]==0.14.4

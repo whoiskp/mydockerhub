@@ -1,0 +1,21 @@
+FROM python:3.6-alpine
+
+ENV PYTHONUNBUFFERED 1
+
+RUN apk add --no-cache build-base linux-headers pcre-dev libjpeg zlib tiff-dev freetype-dev make openssl-dev \
+    libffi-dev gettext gcc libpq netcat-openbsd libxml2-dev zlib-dev libxslt-dev ca-certificates musl-dev python-dev \
+    libev-dev g++ mediainfo && pip --no-cache-dir install --upgrade pip setuptools
+
+RUN apk add --no-cache tzdata && cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime \
+    && echo "Asia/Ho_Chi_Minh" > /etc/timezone \
+    && rm -rf /tmp/* /var/cache/*
+
+
+COPY requirements.freeze /
+RUN pip --no-cache-dir install -r requirements.freeze
+
+WORKDIR /mycode
+
+COPY uwsgi.ini /etc/uwsgi/
+COPY . /mycode
+

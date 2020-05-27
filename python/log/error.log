@@ -1,0 +1,57 @@
+[2020-05-27 16:19:26 +0700] [1] [INFO] Starting gunicorn 20.0.4
+[2020-05-27 16:19:26 +0700] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+[2020-05-27 16:19:26 +0700] [1] [INFO] Using worker: sync
+[2020-05-27 16:19:26 +0700] [7] [INFO] Booting worker with pid: 7
+[2020-05-27 16:19:26 +0700] [8] [INFO] Booting worker with pid: 8
+[2020-05-27 16:19:26 +0700] [9] [INFO] Booting worker with pid: 9
+[2020-05-27 16:19:26 +0700] [10] [INFO] Booting worker with pid: 10
+[2020-05-27 16:20:34 +0700] [1] [INFO] Handling signal: term
+[2020-05-27 16:20:34 +0700] [7] [INFO] Worker exiting (pid: 7)
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+[2020-05-27 16:20:34 +0700] [8] [INFO] Worker exiting (pid: 8)
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+[2020-05-27 16:20:34 +0700] [9] [INFO] Worker exiting (pid: 9)
+[2020-05-27 16:20:34 +0700] [10] [INFO] Worker exiting (pid: 10)
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+Traceback (most recent call last):
+  File "/mycode/src/api.py", line 24, in debug_sentry
+    error = 1/0
+ZeroDivisionError: division by zero
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+[2020-05-27 16:20:35 +0700] [1] [INFO] Shutting down: Master
+[2020-05-27 16:20:49 +0700] [40520] [INFO] Starting gunicorn 20.0.4
+[2020-05-27 16:20:49 +0700] [40520] [INFO] Listening at: http://0.0.0.0:5000 (40520)
+[2020-05-27 16:20:49 +0700] [40520] [INFO] Using worker: sync
+[2020-05-27 16:20:49 +0700] [40523] [INFO] Booting worker with pid: 40523
+[2020-05-27 16:20:49 +0700] [40524] [INFO] Booting worker with pid: 40524
+[2020-05-27 16:20:49 +0700] [40525] [INFO] Booting worker with pid: 40525
+[2020-05-27 16:20:49 +0700] [40526] [INFO] Booting worker with pid: 40526
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+[2020-05-27 16:20:58 +0700] [40520] [INFO] Handling signal: winch
+[2020-05-27 16:21:16 +0700] [40520] [INFO] Handling signal: int
+[2020-05-27 16:21:16 +0700] [40524] [INFO] Worker exiting (pid: 40524)
+[2020-05-27 16:21:16 +0700] [40525] [INFO] Worker exiting (pid: 40525)
+[2020-05-27 16:21:16 +0700] [40526] [INFO] Worker exiting (pid: 40526)
+[2020-05-27 16:21:16 +0700] [40523] [INFO] Worker exiting (pid: 40523)
+[2020-05-27 16:21:16 +0700] [40520] [INFO] Shutting down: Master
+[2020-05-27 16:21:18 +0700] [40666] [INFO] Starting gunicorn 20.0.4
+[2020-05-27 16:21:18 +0700] [40666] [INFO] Listening at: http://0.0.0.0:5000 (40666)
+[2020-05-27 16:21:18 +0700] [40666] [INFO] Using worker: sync
+[2020-05-27 16:21:18 +0700] [40675] [INFO] Booting worker with pid: 40675
+[2020-05-27 16:21:18 +0700] [40676] [INFO] Booting worker with pid: 40676
+[2020-05-27 16:21:18 +0700] [40677] [INFO] Booting worker with pid: 40677
+[2020-05-27 16:21:18 +0700] [40678] [INFO] Booting worker with pid: 40678
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+https://5e67be8c67fd4bf29c14134f22f82466@o398745.ingest.sentry.io/5254840
+success
+[2020-05-27 16:21:32 +0700] [40666] [INFO] Handling signal: int
+[2020-05-27 16:21:32 +0700] [40678] [INFO] Worker exiting (pid: 40678)
+[2020-05-27 16:21:32 +0700] [40677] [INFO] Worker exiting (pid: 40677)
+[2020-05-27 16:21:32 +0700] [40675] [INFO] Worker exiting (pid: 40675)
+[2020-05-27 16:21:32 +0700] [40676] [INFO] Worker exiting (pid: 40676)
+[2020-05-27 16:21:32 +0700] [40666] [INFO] Shutting down: Master
