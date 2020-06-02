@@ -3,6 +3,7 @@ FROM python:3.6-alpine
 RUN apk add --no-cache tzdata && cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime \
     && echo "Asia/Ho_Chi_Minh" > /etc/timezone 
 
+# RUN apk add --no-cache -u ca-certificates libva-intel-driver python3-dev build-base linux-headers pcre-dev
 RUN apk add --no-cache build-base
 
 RUN rm -rf /tmp/* /var/cache/*
