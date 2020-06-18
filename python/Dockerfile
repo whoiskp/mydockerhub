@@ -1,16 +1,18 @@
 FROM python:3.6-alpine
 
 RUN apk add --no-cache tzdata && cp /usr/share/zoneinfo/Asia/Ho_Chi_Minh /etc/localtime \
-    && echo "Asia/Ho_Chi_Minh" > /etc/timezone 
+    && echo "Asia/Ho_Chi_Minh" > /etc/timezone
 
-# RUN apk add --no-cache -u ca-certificates libva-intel-driver python3-dev build-base linux-headers pcre-dev
-RUN apk add --no-cache build-base
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add --no-cache mariadb-dev
 
-RUN rm -rf /tmp/* /var/cache/*
+ENV INSTALL_PATH /mycode
+RUN mkdir -p $INSTALL_PATH
+WORKDIR $INSTALL_PATH
 
-COPY requirements.freeze /
+COPY requirements.freeze .
 RUN pip --no-cache-dir install -r requirements.freeze
 
-COPY . /mycode
-
-WORKDIR /mycode
+RUN apk del build-deps \
+    && rm -rf /tmp/* /var/cache/*
